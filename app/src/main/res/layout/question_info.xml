@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/bootstrap_brand_info"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Examine32138478748377347.git"
+        android:textSize="15dp"
+        android:id="@+id/title"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="描述:有点大渡口登记方法减肥的观念开放的女客服的南方科技的女可能快讯快递费女客服你开房v女付款女客服女客服呢"
+        android:textSize="15dp"
+
+        android:id="@+id/description"
+        android:layout_below="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="git:748759485984598584985@git"
+        android:textSize="15dp"
+        android:id="@+id/git"
+        android:layout_below="@+id/description"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="链接：-1"
+        android:textSize="15dp"
+        android:id="@+id/link"
+        android:layout_below="@+id/git"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bootstrap_brand_secondary_fill"
+        android:id="@+id/blank"
+        android:layout_below="@+id/link"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="难度:3"
+        android:textSize="15dp"
+        android:id="@+id/difficulty"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/title"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发布者:刘钦"
+        android:textSize="15dp"
+        android:id="@+id/creator"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/difficulty"
+        android:layout_toEndOf="@+id/difficulty"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+
+</RelativeLayout>

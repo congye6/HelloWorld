@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="base_url">http://115.29.184.56:8090/api</string>
+    <string name="login_path">/user/auth</string>
+    <string name="student_list_path">/group</string>
+    <string name="students_path">/students</string>
+    <string name="exam_path">/exam</string>
+    <string name="homework_path">/homework</string>
+    <string name="exercise_path">/exercise</string>
+    <string name="course_path">/course</string>
+    <string name="assignment">/assignment</string>
+    <string name="score">/score</string>
+</resources>

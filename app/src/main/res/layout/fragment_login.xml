@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="layout.LoginFragment">
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="success"
+        app:roundedCorners="true"
+        android:textSize="15sp"
+        android:cursorVisible="false"
+        android:gravity="center"
+        android:id="@+id/username"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignStart="@+id/password"
+        android:layout_marginTop="49dp" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:onClick="login"
+        app:bootstrapBrand="success"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="false"
+        app:roundedCorners="true"
+
+        app:bootstrapText="{fa_user}           登录              "
+        android:id="@+id/login"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/register"
+        android:layout_alignStart="@+id/register" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:onClick="register"
+        app:bootstrapText="{fa_lock}           注册              "
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="false"
+        app:roundedCorners="true"
+        android:id="@+id/register"
+        android:layout_below="@+id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp" />
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        app:bootstrapSize="xl"
+        app:bootstrapBrand="success"
+        app:roundedCorners="true"
+        android:textSize="15sp"
+        android:cursorVisible="false"
+        android:gravity="center"
+        android:id="@+id/password"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/username"
+        android:layout_alignLeft="@+id/login"
+        android:layout_alignStart="@+id/login" />
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        app:bootstrapBrand="success"
+        app:bootstrapHeading="h6"
+        app:roundedCorners="true"
+        android:text="登录成功"
+        android:layout_marginTop="26dp"
+        android:id="@+id/successLabel"
+        android:layout_below="@+id/register"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        app:bootstrapBrand="danger"
+        app:bootstrapHeading="h6"
+        app:roundedCorners="true"
+        android:text="登录失败"
+        android:layout_marginTop="26dp"
+        android:id="@+id/failLabel"
+        android:layout_below="@+id/register"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible">
+
+    </com.beardedhen.androidbootstrap.BootstrapLabel>
+
+</RelativeLayout>

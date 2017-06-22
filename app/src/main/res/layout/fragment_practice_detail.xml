@@ -1,0 +1,84 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical"
+    android:fadingEdge="vertical">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context="layout.PracticeDetailFragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="练习一"
+            android:textSize="25dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+
+            android:textColor="@color/bootstrap_brand_primary"
+            android:id="@+id/title" />
+
+        <View  android:layout_height="2px"
+            android:layout_width="match_parent"
+            android:background="@color/bootstrap_brand_primary"
+            android:layout_marginTop="35dp"
+            android:id="@+id/view3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始时间：2017-05-05 12:00\n结束时间：2017-05-05 12:00"
+            android:textSize="15dp"
+            android:textColor="@color/bootstrap_brand_primary"
+            android:id="@+id/start"
+            android:layout_below="@+id/view3"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进行中"
+            android:textSize="25dp"
+
+            android:textColor="@color/bootstrap_brand_primary"
+            android:id="@+id/status"
+            android:layout_alignBottom="@+id/start"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="描述:有点大渡口登记方法减肥的观念开放的女客服的南方科技的女可能快讯快递费女客服你开房v女付款女客服女客服呢"
+            android:textSize="15dp"
+            android:textColor="@color/bootstrap_brand_primary"
+            android:id="@+id/description"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/start"
+            android:layout_alignLeft="@+id/title"
+            android:layout_alignStart="@+id/title" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/questions"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/description"
+            />
+    </RelativeLayout>
+
+
+</ScrollView>
