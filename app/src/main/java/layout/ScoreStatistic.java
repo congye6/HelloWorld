@@ -9,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.example.cong.helloworld.Activity.SampleApplication;
 import com.example.cong.helloworld.Controller.ScoreController;
 import com.example.cong.helloworld.R;
 import com.example.cong.helloworld.Tool.MyXFormatter;
@@ -55,20 +57,30 @@ public class ScoreStatistic extends Fragment {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_score_statistic, container, false);
         ScoreController controller=new ScoreController(this);
-        controller.getScores(38);
+        controller.getScores(90);
         return view;
     }
 
     public void setData(AllScore[] scores){
         LinearLayout layout=(LinearLayout) getActivity().findViewById(R.id.score_list);
-
+        Context context= SampleApplication.getContext();
         if(scores.length==0){
             //显示无数据
+            TextView alert=new TextView(context);
+            alert.setText("暂无数据");
+            layout.addView(alert);
             return;
         }
         for(AllScore score:scores){
             LayoutInflater inflater=getActivity().getLayoutInflater();
             View view=inflater.inflate(R.layout.score_info,null);
+
+            TextView title=(TextView) view.findViewById(R.id.title);
+            title.setText(score.getQuestionInfo().title);
+
+            TextView description=(TextView)view.findViewById(R.id.description);
+            description.setText(score.getQuestionInfo().description);
+
             BarChart chart=(BarChart) view.findViewById(R.id.first_chart);
 
             //x轴

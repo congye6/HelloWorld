@@ -15,6 +15,7 @@ import java.util.List;
 import layout.PracticeFragment;
 import layout.ProfileFragment;
 import layout.StudentListFragment;
+import layout.StudentScoreStatisticFragment;
 
 /**
  * Created by cong on 2017-06-16.
@@ -27,12 +28,15 @@ public class StudentTabListener implements TabListener{
 
     private Fragment profileFragment= ProfileFragment.newInstance();
 
+    private Fragment scoreFragment= StudentScoreStatisticFragment.newInstance();
+
     private Fragment practiceFragment= PracticeFragment.newInstance();
 
     private List<Fragment> fragments=new ArrayList<>();
 
     public StudentTabListener(MainActivity activity){
         fragments.add(practiceFragment);
+        fragments.add(scoreFragment);
         fragments.add(profileFragment);
         this.activity=activity;
     }

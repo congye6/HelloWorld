@@ -51,35 +51,24 @@ public class HttpPostTask extends AsyncTask<String,Integer,String> {
     }
 
     public String get(String url){
-        //将URL与参数拼接
+        //将你的url放到post中
         HttpPost postMethod = new HttpPost(url);
         HttpClient httpClient = new DefaultHttpClient();
         try {
             if(jsonObject!=null){
+                //设置http请求的body，这里我传入了json数据
                 StringEntity entity=new StringEntity(jsonObject.toString(),"utf-8");
                 entity.setContentType("application/json");
                 postMethod.setEntity(entity);
             }
-
-
-            if(isNeedAuth){
-                Context context= SampleApplication.getContext();
-                String username=PropertyTool.getInfo(context,context.getString(R.string.username));
-                String password=PropertyTool.getInfo(context,context.getString(R.string.password));
-
-                postMethod.addHeader("Authorization","Basic " + (Base64.encodeToString((username+":"+password).getBytes(),Base64.DEFAULT)));
-            }
-
-
+            //执行post请求，获得response
             HttpResponse response = httpClient.execute(postMethod);
 
-
             StringBuilder builder = new StringBuilder();
-
-
+            //从response中获取body里面的内容
             BufferedReader bufferedReader2 = new BufferedReader(
                     new InputStreamReader(response.getEntity().getContent()));
-
+            //逐行读取内容
             for (String s = bufferedReader2.readLine(); s != null; s = bufferedReader2
                     .readLine()) {
                 builder.append(s);
@@ -99,7 +88,6 @@ public class HttpPostTask extends AsyncTask<String,Integer,String> {
 
     @Override
     protected String doInBackground(String... params) {
-
         return get(params[0]);
     }
 
