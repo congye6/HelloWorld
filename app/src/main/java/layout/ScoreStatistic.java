@@ -33,15 +33,16 @@ import java.util.List;
 
 public class ScoreStatistic extends Fragment {
 
+    private int assigmentId;
 
     public ScoreStatistic() {
         // Required empty public constructor
     }
 
     // TODO: Rename and change types and number of parameters
-    public static ScoreStatistic newInstance() {
+    public static ScoreStatistic newInstance(int assigmentId) {
         ScoreStatistic fragment = new ScoreStatistic();
-
+        fragment.assigmentId=assigmentId;
         return fragment;
     }
 
@@ -57,7 +58,7 @@ public class ScoreStatistic extends Fragment {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_score_statistic, container, false);
         ScoreController controller=new ScoreController(this);
-        controller.getScores(90);
+        controller.getScores(assigmentId);
         return view;
     }
 

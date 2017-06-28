@@ -21,10 +21,6 @@ import layout.LoginFragment;
 
 public class MainActivity  extends AppCompatActivity {
 
-
-
-
-
     private TabListener listener;
 
     private LoginFragment loginFragment;

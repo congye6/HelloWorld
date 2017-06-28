@@ -27,11 +27,11 @@
         android:layout_toRightOf="@+id/avatar"
         android:layout_toEndOf="@+id/avatar" />
 
-    <android.support.v4.widget.CircleImageView
+    <ImageView
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:id="@+id/avatar"
-        android:background="@drawable/profile"
+        android:background="@drawable/icon"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

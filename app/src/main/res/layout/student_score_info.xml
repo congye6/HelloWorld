@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bootstrap_brand_info">
+
+    <TextView
+        android:id="@+id/title"
+        android:text="问题一dfjfj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/description"
+        android:text="问题描述:djfndjfdkfjkdfjkdfjkdfjfj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_alignLeft="@+id/title"
+        android:layout_alignStart="@+id/title" />
+
+    <TextView
+        android:id="@+id/score"
+        android:text="得分:90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/description"
+        android:layout_toRightOf="@+id/title"
+        android:layout_toEndOf="@+id/title"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp" />
+
+    <TextView
+        android:id="@+id/git"
+        android:text="git:2384394854985948594859458585858"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_alignLeft="@+id/description"
+        android:layout_alignStart="@+id/description" />
+
+    <TextView
+        android:id="@+id/analysis"
+        android:text="总行数:90  注释行数:25  方法数:23\n属性数:12  max_coc:12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/git"
+        android:layout_alignLeft="@+id/git"
+        android:layout_alignStart="@+id/git" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/analysis"
+        android:layout_alignLeft="@+id/analysis"
+        android:layout_alignStart="@+id/analysis"
+        android:id="@+id/linearLayout">
+        <TextView
+            android:id="@+id/testcase"
+            android:text="测试用例通过情况\n测试用例一:通过\n测试用例二:不通过"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/readme"
+        android:text="readme:djfhkdfjkdjfkdfjkdfjkfjfkdfjj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

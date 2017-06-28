@@ -105,7 +105,7 @@ public class ProfileFragment extends Fragment {
             TextView number=(TextView)view.findViewById(R.id.number);
             number.setText("学号:"+PropertyTool.getInfo(context,"number"));
             TextView git=(TextView)view.findViewById(R.id.git);
-            git.setText("git:"+PropertyTool.getInfo(context,"git"));
+            git.setText("git:"+PropertyTool.getInfo(context,"gitId"));
         }
     }
 

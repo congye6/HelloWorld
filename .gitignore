@@ -47,3 +47,8 @@ Temporary Items
 .apdisk
 *.bin
 *.lock
+.gradle/2.14.1/taskArtifacts/fileHashes.bin
+*.bin
+.gradle/2.14.1/taskArtifacts/fileHashes.bin
+.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin
+*.bin

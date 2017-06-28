@@ -34,7 +34,7 @@ public class TeacherTabListener implements TabListener {
 
     private Fragment practiceFragment=PracticeFragment.newInstance();
 
-    private Fragment scoreFragment= ScoreStatistic.newInstance();
+    private Fragment scoreFragment= ScoreStatistic.newInstance(38);
 
     private List<Fragment> fragments=new ArrayList<>();
 

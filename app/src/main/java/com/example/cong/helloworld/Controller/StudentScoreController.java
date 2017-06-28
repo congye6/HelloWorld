@@ -28,10 +28,12 @@ public class StudentScoreController implements HttpCallBackService{
                 "/student/"+studentId+"/analysis";
         HttpGetTask getTask=new HttpGetTask(this);
         getTask.execute(url);
+
     }
 
     @Override
     public void callback(String json) {
         System.out.println("get student score json:"+json);
+        fragment.showResult();
     }
 }
