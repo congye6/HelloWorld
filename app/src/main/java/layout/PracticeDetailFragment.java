@@ -10,7 +10,16 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.beardedhen.androidbootstrap.BootstrapButton;
+import com.beardedhen.androidbootstrap.BootstrapText;
+import com.beardedhen.androidbootstrap.api.attributes.BootstrapBrand;
+import com.beardedhen.androidbootstrap.api.defaults.DefaultBootstrapBrand;
+import com.example.cong.helloworld.Activity.MainActivity;
+import com.example.cong.helloworld.Activity.SampleApplication;
+import com.example.cong.helloworld.Activity.listener.StudentScoreListener;
+import com.example.cong.helloworld.Activity.listener.TeacherScoreListener;
 import com.example.cong.helloworld.R;
+import com.example.cong.helloworld.Tool.PropertyTool;
 import com.example.cong.helloworld.Tool.StatusTool;
 import com.example.cong.helloworld.vo.Practice;
 import com.example.cong.helloworld.vo.Question;
@@ -55,12 +64,14 @@ public class PracticeDetailFragment extends Fragment {
     public void showQuestions(View view) {
 
         LinearLayout questions=(LinearLayout)view.findViewById(R.id.questions);
-
+        Context context= SampleApplication.getContext();
         for(Question question:practice.questions){
             View questionView= getActivity().getLayoutInflater().inflate(R.layout.question_info, null);
 
             TextView title=(TextView) questionView.findViewById(R.id.title);
             title.setText(question.title);
+
+
 
             TextView difficulty=(TextView)questionView.findViewById(R.id.difficulty);
             difficulty.setText("难度:"+question.difficulty);
@@ -98,11 +109,26 @@ public class PracticeDetailFragment extends Fragment {
         TextView start=(TextView)main.findViewById(R.id.start);
         start.setText("开始时间:"+practice.startAt+"\n结束时间:"+practice.endAt);
 
-        TextView status=(TextView)main.findViewById(R.id.status);
-        status.setText(StatusTool.getStatus(practice.getStatus()));
-
         TextView description=(TextView)main.findViewById(R.id.description);
         description.setText("描述:"+practice.description);
+
+        Context context=SampleApplication.getContext();
+        BootstrapButton status=(BootstrapButton)main.findViewById(R.id.status);
+        BootstrapText.Builder builder=new BootstrapText.Builder(context);
+        builder.addText(StatusTool.getStatus(practice.status));
+        status.setBootstrapText(builder.build());
+        if(practice.status.equals("analyzingFinish")){
+            status.setBootstrapBrand(DefaultBootstrapBrand.SUCCESS);
+            String type= PropertyTool.getInfo(context,"type");
+            //go to analysis
+            if("teacher".equals(type)){
+                TeacherScoreListener listener=new TeacherScoreListener((MainActivity) getActivity(),38);
+                status.setOnClickListener(listener);
+            }else{
+                StudentScoreListener listener=new StudentScoreListener((MainActivity)getActivity(),26,227);
+                status.setOnClickListener(listener);
+            }
+        }
     }
 
 }

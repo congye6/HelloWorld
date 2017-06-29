@@ -80,7 +80,7 @@ public class ScoreStatistic extends Fragment {
             title.setText(score.getQuestionInfo().title);
 
             TextView description=(TextView)view.findViewById(R.id.description);
-            description.setText(score.getQuestionInfo().description);
+            description.setText("问题描述:"+score.getQuestionInfo().description);
 
             BarChart chart=(BarChart) view.findViewById(R.id.first_chart);
 

@@ -5,6 +5,7 @@
     <TextView
         android:id="@+id/title"
         android:text="问题一"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

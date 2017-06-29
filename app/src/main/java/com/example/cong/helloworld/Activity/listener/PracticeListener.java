@@ -27,6 +27,5 @@ public class PracticeListener implements View.OnClickListener{
     public void onClick(View v) {
         PracticeDetailFragment fragment=PracticeDetailFragment.newInstance(practice);
         mainActivity.changeFragment(fragment);
-
     }
 }

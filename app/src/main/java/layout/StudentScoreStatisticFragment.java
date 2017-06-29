@@ -17,15 +17,20 @@ import java.util.zip.Inflater;
 public class StudentScoreStatisticFragment extends Fragment {
 
 
+    private int assignmentId;
+
+    private int studentId;
+
     public StudentScoreStatisticFragment() {
         // Required empty public constructor
     }
 
 
     // TODO: Rename and change types and number of parameters
-    public static StudentScoreStatisticFragment newInstance() {
+    public static StudentScoreStatisticFragment newInstance(int assignmentId,int studentId) {
         StudentScoreStatisticFragment fragment = new StudentScoreStatisticFragment();
-
+        fragment.assignmentId=assignmentId;
+        fragment.studentId=studentId;
         return fragment;
     }
 
@@ -33,7 +38,7 @@ public class StudentScoreStatisticFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         StudentScoreController controller=new StudentScoreController(this);
-        controller.getStudentScore(26,227);
+        controller.getStudentScore(assignmentId,studentId);
     }
 
     @Override

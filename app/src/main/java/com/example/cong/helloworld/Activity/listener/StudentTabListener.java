@@ -28,7 +28,7 @@ public class StudentTabListener implements TabListener{
 
     private Fragment profileFragment= ProfileFragment.newInstance();
 
-    private Fragment scoreFragment= StudentScoreStatisticFragment.newInstance();
+    private Fragment scoreFragment= StudentScoreStatisticFragment.newInstance(26,227);
 
     private Fragment practiceFragment= PracticeFragment.newInstance();
 

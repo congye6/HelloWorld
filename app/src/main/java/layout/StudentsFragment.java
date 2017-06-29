@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.beardedhen.androidbootstrap.AwesomeTextView;
 import com.beardedhen.androidbootstrap.BootstrapText;
@@ -67,10 +68,17 @@ public class StudentsFragment extends Fragment {
     public void showStudents(Student[] students){
         LinearLayout layout=(LinearLayout) getActivity().findViewById(R.id.students);
 
+        if(students.length==0){
+            TextView error=new TextView(SampleApplication.getContext());
+            error.setText("暂无数据");
+            layout.addView(error);
+        }
+
+
         LayoutInflater inflater=getActivity().getLayoutInflater();
         for(Student student:students){
             View info=inflater.inflate(R.layout.student_info,null);
-            String name=student.name+"("+student.name+")";
+            String name=student.name+"("+student.username+")";
             Context context=SampleApplication.getContext();
 
             //name
