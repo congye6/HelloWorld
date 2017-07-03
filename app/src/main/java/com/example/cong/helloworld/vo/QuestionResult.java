@@ -6,17 +6,17 @@ package com.example.cong.helloworld.vo;
 
 public class QuestionResult {
 
-    public QuestionInfo[] questionResults;
+    public QuetionWrapper[] questionResults;
 
     public int studentId;
 
     public int assignmentId;
 
-    public QuestionInfo[] getQuestionResults() {
+    public QuetionWrapper[] getQuestionResults() {
         return questionResults;
     }
 
-    public void setQuestionResults(QuestionInfo[] questionResults) {
+    public void setQuestionResults(QuetionWrapper[] questionResults) {
         this.questionResults = questionResults;
     }
 
@@ -70,55 +70,7 @@ public class QuestionResult {
      */
 
 
-    class QuetionInfo{
-        public int questionId;
-        public String questionTitle;
-        public ScoreResult scoreResult;
 
-        public MetricData metricData;
-
-        public TestResult testResult;
-
-        public int getQuestionId() {
-            return questionId;
-        }
-
-        public void setQuestionId(int questionId) {
-            this.questionId = questionId;
-        }
-
-        public String getQuestionTitle() {
-            return questionTitle;
-        }
-
-        public void setQuestionTitle(String questionTitle) {
-            this.questionTitle = questionTitle;
-        }
-
-        public ScoreResult getScoreResult() {
-            return scoreResult;
-        }
-
-        public void setScoreResult(ScoreResult scoreResult) {
-            this.scoreResult = scoreResult;
-        }
-
-        public MetricData getMetricData() {
-            return metricData;
-        }
-
-        public void setMetricData(MetricData metricData) {
-            this.metricData = metricData;
-        }
-
-        public TestResult getTestResult() {
-            return testResult;
-        }
-
-        public void setTestResult(TestResult testResult) {
-            this.testResult = testResult;
-        }
-    }
 
 }
 

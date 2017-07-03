@@ -21,7 +21,7 @@ public class TestResult {
     public String git_url;
     public String compile_succeeded;
     public String tested;
-    public TestCase[] testCases;
+    public TestCase[] testcases;
 
     public String getGit_url() {
         return git_url;
@@ -47,33 +47,14 @@ public class TestResult {
         this.tested = tested;
     }
 
-    public TestCase[] getTestCases() {
-        return testCases;
+    public TestCase[] getTestcases() {
+        return testcases;
     }
 
-    public void setTestCases(TestCase[] testCases) {
-        this.testCases = testCases;
+    public void setTestcases(TestCase[] testCases) {
+        this.testcases = testCases;
     }
 
-    class TestCase{
-        public String name;
-        public String passed;
 
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getPassed() {
-            return passed;
-        }
-
-        public void setPassed(String passed) {
-            this.passed = passed;
-        }
-    }
 
 }

@@ -125,7 +125,7 @@ public class PracticeDetailFragment extends Fragment {
                 TeacherScoreListener listener=new TeacherScoreListener((MainActivity) getActivity(),38);
                 status.setOnClickListener(listener);
             }else{
-                StudentScoreListener listener=new StudentScoreListener((MainActivity)getActivity(),26,227);
+                StudentScoreListener listener=new StudentScoreListener((MainActivity)getActivity(),38,256);
                 status.setOnClickListener(listener);
             }
         }

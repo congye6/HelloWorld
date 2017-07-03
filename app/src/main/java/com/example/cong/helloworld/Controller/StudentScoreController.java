@@ -5,6 +5,8 @@ import android.content.Context;
 import com.example.cong.helloworld.Activity.SampleApplication;
 import com.example.cong.helloworld.R;
 import com.example.cong.helloworld.Tool.HttpGetTask;
+import com.example.cong.helloworld.vo.QuestionResult;
+import com.google.gson.Gson;
 
 import layout.StudentScoreStatisticFragment;
 
@@ -34,6 +36,8 @@ public class StudentScoreController implements HttpCallBackService{
     @Override
     public void callback(String json) {
         System.out.println("get student score json:"+json);
-        fragment.showResult();
+        Gson gson=new Gson();
+        QuestionResult result=gson.fromJson(json,QuestionResult.class);
+        fragment.showResult(result.questionResults);
     }
 }

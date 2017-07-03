@@ -13,21 +13,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:id="@+id/description"
-        android:text="问题描述:djfndjfdkfjkdfjkdfjkdfjfj"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:layout_alignLeft="@+id/title"
-        android:layout_alignStart="@+id/title" />
+
 
     <TextView
         android:id="@+id/score"
         android:text="得分:90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/description"
+        android:layout_above="@+id/git"
         android:layout_toRightOf="@+id/title"
         android:layout_toEndOf="@+id/title"
         android:layout_marginLeft="17dp"
@@ -38,9 +31,8 @@
         android:text="git:2384394854985948594859458585858"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/description"
-        android:layout_alignLeft="@+id/description"
-        android:layout_alignStart="@+id/description" />
+        android:layout_below="@+id/title"
+         />
 
     <TextView
         android:id="@+id/analysis"
@@ -51,28 +43,32 @@
         android:layout_alignLeft="@+id/git"
         android:layout_alignStart="@+id/git" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/analysis"
-        android:layout_alignLeft="@+id/analysis"
-        android:layout_alignStart="@+id/analysis"
-        android:id="@+id/linearLayout">
+
         <TextView
             android:id="@+id/testcase"
-            android:text="测试用例通过情况\n测试用例一:通过\n测试用例二:不通过"
+            android:text=""
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/analysis"
+            android:layout_alignLeft="@+id/analysis"
+            android:layout_alignStart="@+id/analysis"/>
 
-
-    </LinearLayout>
 
     <TextView
         android:id="@+id/readme"
         android:text="readme:djfhkdfjkdjfkdfjkdfjkfjfkdfjj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout"
+        android:layout_below="@+id/testcase"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/bootstrap_brand_secondary_fill"
+        android:id="@+id/blank"
+        android:layout_below="@+id/readme"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
